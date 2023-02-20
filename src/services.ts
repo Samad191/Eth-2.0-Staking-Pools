@@ -111,7 +111,7 @@ export const uniqueToAndFrom = async() => {
 
   console.log('unique')
 
-  const mongoUri = "mongodb+srv://Abdul_Samad:hCrRDOsoeyunxy0T@cluster0.aajqjmy.mongodb.net/eth_deposit?retryWrites=true&w=majority";
+  const mongoUri = process.env.MONGO_URI;
   
   mongoose.connect(mongoUri, {
     useNewUrlParser: true,
@@ -196,7 +196,7 @@ export const repeatingTxHashes = async () => {
   console.log('repeatingTxHashes');
 
 
-  const mongoUri = "mongodb+srv://Abdul_Samad:hCrRDOsoeyunxy0T@cluster0.aajqjmy.mongodb.net/eth_deposit?retryWrites=true&w=majority";
+  const mongoUri = process.env.MONGO_URI;
   
   mongoose.connect(mongoUri, {
     useNewUrlParser: true,
